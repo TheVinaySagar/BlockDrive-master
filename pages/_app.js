@@ -3,14 +3,13 @@ import "../styles/globals.css";
 //INTERNAL IMPORT
 import { CONTEXT_Provider } from "../context/context";
 import toast, { Toaster } from "react-hot-toast"; 
-import Chatbot from "../components/Chatbot";
+import Chatbot from "../components/chatbot";
 
 export default function App({ Component, pageProps }) {
   return (
     <>
       <CONTEXT_Provider>
         <Component {...pageProps} />
-        {/* 👇 Chatbot mounted globally, always available */}
         <Chatbot />
       </CONTEXT_Provider>
       <Toaster />
